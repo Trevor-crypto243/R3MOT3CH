@@ -9,11 +9,12 @@ use App\Models\product;
 
 use Cart;
 
-class ShopComponent extends Component
+class CategoryComponent extends Component
 {
     use WithPagination;
     public $pageSize = 12;
     public $orderBy = "Default Sorting";
+    public $slug;
 
 
 
@@ -28,23 +29,31 @@ class ShopComponent extends Component
         $this->pageSize = $size;
     }
 
+    public function mount($slug){
+        $this->slug = $slug;
+    }
+
     public function changeOrderBy($order){
         $this->orderBy = $order;
     }
     public function render()
     {
+        $category = Category::where('slug',$this->slug)->first();
+        $category_id = $category->id;
+        $category_name = $category->name;
+
         if($this->orderBy == 'Price: Low to High' ){
-            $products = product::orderBy('regular_price','ASC')->paginate($this->pageSize);
+            $products = product::where('category_id', $category_id)->orderBy('regular_price','ASC')->paginate($this->pageSize);
         }else  if($this->orderBy == 'Price: Low to High' ){
-            $products = product::orderBy('regular_price','DESC')->paginate($this->pageSize);
+            $products = product::where('category_id', $category_id)->orderBy('regular_price','DESC')->paginate($this->pageSize);
         }else  if($this->orderBy == 'Price: Hight to Lowh' ){
-            $products = product::orderBy('regular_price','ASC')->paginate($this->pageSize);
+            $products = product::where('category_id', $category_id)->orderBy('regular_price','ASC')->paginate($this->pageSize);
         }else  if($this->orderBy == 'Sort by newness' ){
-            $products = product::orderBy('created_at','DESC')->paginate($this->pageSize);
+            $products = product::where('category_id', $category_id)->orderBy('created_at','DESC')->paginate($this->pageSize);
         }else{
-            $products = Product::paginate($this->pageSize);
+            $products = Product::where('category_id', $category_id)->paginate($this->pageSize);
         }
         $categories = category::orderBy('name','ASC')->get();
-        return view('livewire.shop-component',['products'=>$products,'categories'=>$categories]); //passing the variables to the view
+        return view('livewire.category-component',['products'=>$products,'categories'=>$categories,'category_name'=>$category_name]); //passing the variables to the view
     }
 }

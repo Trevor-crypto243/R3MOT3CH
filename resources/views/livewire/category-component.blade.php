@@ -23,7 +23,7 @@
                     <div class="col-lg-9">
                         <div class="shop-product-fillter">
                             <div class="totall-product">
-                                <p> We found <strong class="text-brand">{{$products->total()}}</strong> items for you!</p>
+                                <p> We found <strong class="text-brand">{{$products->total()}}</strong> items for you<b>{{$category_name}}</b>!</p>
                             </div>
                             <div class="sort-by-product-area">
                                 <div class="sort-by-cover mr-10">
@@ -136,7 +136,7 @@
                             <ul class="categories">
                                 @foreach($categories as $category)
                                     <li><a href="{{route('product.category',['slug'=>category->slug])}}">{{$category->name}}</a></li>    
-                                @endforeach
+                                 @endforeach
                             </ul>
                         </div>
                         <!-- Fillter By Price -->

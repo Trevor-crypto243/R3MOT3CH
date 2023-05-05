@@ -30,6 +30,7 @@ Route::get('/shop',ShopComponent::class)->name('shop.index');
 Route::get('/cart',CartComponent::class)->name('shop.cart');
 Route::get('/checkout',CheckoutComponent::class)->name('home.index');
 Route::get('/product/{slug}',DetailsComponent::class)->name("product.details");
+Route::get('/product-category/{slug}',CategoryComponent::class)->name("product.category");
 
 
 
