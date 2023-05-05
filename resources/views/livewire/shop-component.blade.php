@@ -23,7 +23,7 @@
                     <div class="col-lg-9">
                         <div class="shop-product-fillter">
                             <div class="totall-product">
-                                <p> We found <strong class="text-brand">688</strong> items for you!</p>
+                                <p> We found <strong class="text-brand">{{$products->total()}}</strong> items for you!</p>
                             </div>
                             <div class="sort-by-product-area">
                                 <div class="sort-by-cover mr-10">
@@ -32,16 +32,15 @@
                                             <span><i class="fi-rs-apps"></i>Show:</span>
                                         </div>
                                         <div class="sort-by-dropdown-wrap">
-                                            <span> 50 <i class="fi-rs-angle-small-down"></i></span>
+                                            <span> {{$pageSize}} <i class="fi-rs-angle-small-down"></i></span>
                                         </div>
                                     </div>
                                     <div class="sort-by-dropdown">
                                         <ul>
-                                            <li><a class="active" href="#">50</a></li>
-                                            <li><a href="#">100</a></li>
-                                            <li><a href="#">150</a></li>
-                                            <li><a href="#">200</a></li>
-                                            <li><a href="#">All</a></li>
+                                            <li><a class="{{$pageSize==12 ? 'active': " "}}" href="#" wire:click.prevent="changePageSize(12)">12</a></li>
+                                            <li><a class="{{$pageSize==15 ? 'active': " "}}" href="#" wire:click.prevent="changePageSize(15)">15</a></li>
+                                            <li><a class="{{$pageSize==25 ? 'active': " "}}" href="#" wire:click.prevent="changePageSize(25)">25</a></li>
+                                            <li><a class="{{$pageSize==32 ? 'active': " "}}" href="#" wire:click.prevent="changePageSize(32)">32</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -51,15 +50,15 @@
                                             <span><i class="fi-rs-apps-sort"></i>Sort by:</span>
                                         </div>
                                         <div class="sort-by-dropdown-wrap">
-                                            <span> Featured <i class="fi-rs-angle-small-down"></i></span>
+                                            <span> Default Sorting <i class="fi-rs-angle-small-down"></i></span>
                                         </div>
                                     </div>
                                     <div class="sort-by-dropdown">
-                                        <ul>
-                                            <li><a class="active" href="#">Featured</a></li>
-                                            <li><a href="#">Price: Low to High</a></li>
-                                            <li><a href="#">Price: High to Low</a></li>
-                                            <li><a href="#">Release Date</a></li>
+                                        <ul>          
+                                            <li><a href="#" wire:click.prevent="changeOrderBy('Default sorting')">Default sorting</a></li>
+                                            <li><a href="#" wire:click.prevent="changeOrderBy('Price: Low to High')">Price: Low to High</a></li>
+                                            <li><a href="#" wire:click.prevent="changeOrderBy('Price: High to Low')">Price: High to Low</a></li>
+                                            <li><a href="#" wire:click.prevent="changeOrderBy('Sort by newness')">Sort by newness</a></li>
                                             <li><a href="#">Avg. Rating</a></li>
                                         </ul>
                                     </div>
