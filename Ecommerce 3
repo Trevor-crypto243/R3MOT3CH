@@ -49,4 +49,6 @@ php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServi
 updating cart quantity - increasing and decreasing amounts
 deleting products from the cart
 
+making cart icon dynamic
+
 
