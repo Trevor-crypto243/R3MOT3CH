@@ -73,11 +73,7 @@
                         <a href="index.html"><img src="assets/imgs/logo/logo.png" alt="logo"></a>
                     </div>
                     <div class="header-right">
-                        <div class="search-style-1">
-                            <form action="#">                                
-                                <input type="text" placeholder="Search for items...">
-                            </form>
-                        </div>
+                       @livewire('header-search-component');
                         <div class="header-action-right">
                             <div class="header-action-2">
                                 <div class="header-action-icon-2">
@@ -452,12 +448,11 @@
                 </div>
             </div>
             <div class="mobile-header-content-area">
-                <div class="mobile-search search-style-3 mobile-header-border">
-                    <form action="#">
-                        <input type="text" placeholder="Search for items…">
-                        <button type="submit"><i class="fi-rs-search"></i></button>
-                    </form>
-                </div>
+
+
+                @livewire('header-search-component');
+
+                
                 <div class="mobile-menu-wrap mobile-header-border">
                     <div class="main-categori-wrap mobile-header-border">
                         <a class="categori-button-active-2" href="#">
