@@ -46,5 +46,7 @@ create an alias
 publish config file
 php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
 
-updating cart quantity
+updating cart quantity - increasing and decreasing amounts
+deleting products from the cart
+
 

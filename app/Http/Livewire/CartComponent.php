@@ -20,6 +20,15 @@ class CartComponent extends Component
         Cart::update($rowId,$qty);
 
     }
+    
+    public function destroy($id){
+        Cart::remove($id);
+        session()->flash('success_message','item has been removed');
+    }
+
+    public function clearAll(){
+        Cart::destroy();
+    }
 
 
     public function render()
