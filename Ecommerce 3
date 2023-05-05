@@ -1,0 +1,48 @@
+composer require livewire/livewire
+
+livewire
+Make a live wire component
+php artisan make:livewire HomeComponent
+<script src="{{ asset('assets/js/vendor/modernizr-3.6.0.min.js') }}"></script>
+<link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
+Create livewire components
+declare routes for the live wire components
+
+
+_______ADMIN AND USER AUTHENTICATION________
+composer require laravel/breeze --dev
+php artisan breeze:install
+php artisan serve
+
+______BUILD THE ASSETS______
+npm install && npm run build
+
+
+________ADMIN MIDDLEWARE_________
+php artisan make:middleware AuthAdmin
+
+
+______CUSTOMISING LOGIN AND REGISTER__________
+
+_______MAKING THE PRODUCTS DYNAMIC_________
+Factories, seeders
+using faker to generate false entries
+adding models to live wie components
+using blade directives to loop over producst
+Pagination, limiting number of products displayed
+php artisan make:factory CategoryFactory -model=category  //creating the category factory
+Making columns to be nullable
+
+________CREATE PRODUCTS DETAIL PAGE________
+
+
+__________SHOPPING CART___________
+Install the shopping cart package
+composer require hardevine/shoppingcart
+configure the package
+add Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class in app.php config folder
+create an alias
+
+publish config file
+php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+
