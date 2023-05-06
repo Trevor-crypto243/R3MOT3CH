@@ -2,7 +2,7 @@
 <div class="header-action-icon-2">
     <a class="mini-cart-icon" href="{{route('shop.cart')}}">
         <img src="{{asset('assets/imgs/theme/icons/icon-cart.svg')}}" alt="blank">
-        @if(Cart::count()>0)
+        @if(Cart::instance('cart')->count()>0)
             <span class="pro-count white">{{Cart::count()}}</span>
         @endif
     </a>
@@ -25,7 +25,7 @@
         </ul>
         <div class="shopping-cart-footer">
             <div class="shopping-cart-total">
-                <h4>Total <span>{{Cart::total()}}</span></h4>
+                <h4>Total <span>{{Cart::instance('cart')->total()}}</span></h4>
             </div>
             <div class="shopping-cart-button">
                 <a href="{{route('shop.cart')}}">View cart</a>

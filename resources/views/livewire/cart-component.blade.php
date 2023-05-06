@@ -20,7 +20,7 @@
                                     <strong>Success | {{Session::get('success_message')}}</strong>
                                 </div>
                                 @endif
-                                @if(Cart::count()>0)
+                                @if(Cart::instance('cart')->count()>0)
                                 <thead>
                                     <tr class="main-heading">
                                         <th scope="col">Image</th>

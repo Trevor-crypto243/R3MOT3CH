@@ -6,6 +6,13 @@
         nav .hidden{
             display: block;
         }
+        .wishlisted{
+            background-color: #ff1155 !important;
+            border: 1px solid transparent !important;
+        }
+        .wishlisted i{
+            color: #fff !important;
+        }
     </style>
 
     <main class="main">
@@ -67,6 +74,9 @@
                         </div>
 
                         <div class="row product-grid-3">
+                            @php
+                                $witems = Cart::instance('wishlist')->content()->pluck('id');
+                            @endphp
                             @foreach ($products as $product)                            
                          
                             <div class="col-lg-4 col-md-4 col-6 col-sm-6">
@@ -103,6 +113,11 @@
                                             {{-- <span class="old-price">$245.8</span> --}}
                                         </div>
                                         <div class="product-action-1 show">
+                                            @if($witems->contains($product->id))
+                                                <a aria-label="Add To Wishlist" class="action-btn hover-up wishlisted" href="wishlist.php"><i class="fi-rs-heart"></i></a>
+                                            @else
+                                                <a aria-label="Add To Wishlist" class="action-btn hover-up" href="#" wire:click.prevent="addToWishlist({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"><i class="fi-rs-heart"></i></a>
+                                            @endif
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="#" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"><i class="fi-rs-shopping-bag-add"></i></a>
                                         </div>
                                     </div>

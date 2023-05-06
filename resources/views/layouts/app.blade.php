@@ -412,12 +412,8 @@
                     <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%</p>
                     <div class="header-action-right d-block d-lg-none">
                         <div class="header-action-2">
-                            <div class="header-action-icon-2">
-                                <a href="shop-wishlist.php">
-                                    <img alt="Surfside Media" src="assets/imgs/theme/icons/icon-heart.svg">
-                                    <span class="pro-count white">4</span>
-                                </a>
-                            </div>
+                           
+                            @livewire('wishlist-icon-component')
 
                             @livewire('cart-icon-component')
                            
