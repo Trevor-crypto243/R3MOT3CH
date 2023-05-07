@@ -7,6 +7,9 @@ php artisan make:livewire HomeComponent
 <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 Create livewire components
 declare routes for the live wire components
+Use of components to access models and link with the views
+Writing the functions in the live wire classes
+using live wire with Pagination
 
 
 _______ADMIN AND USER AUTHENTICATION________
@@ -62,3 +65,6 @@ ___________PRODUCT SHOPPINg____________
 
 _________REMOVE PRODUCT FROM WISH LIST_________
 -Showing all wish listed products
+
+
+__________ADMIN PAGE____________
