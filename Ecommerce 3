@@ -10,6 +10,15 @@ declare routes for the live wire components
 Use of components to access models and link with the views
 Writing the functions in the live wire classes
 using live wire with Pagination
+creating a new live wire component for every event happening in the web app, or anything requiring database access
+
+slug - computer science
+https://itnext.io/whats-a-slug-f7e74b6c23e0
+
+using session()->flash('message') to display messages after a function has been executed
+displaying error messges with @erro @enderror
+working with success messages
+working with sessions
 
 
 _______ADMIN AND USER AUTHENTICATION________
@@ -68,3 +77,11 @@ _________REMOVE PRODUCT FROM WISH LIST_________
 
 
 __________ADMIN PAGE____________
+-pagination
+-displaying items in rows and columns
+-Adding new category by admin
+All admin routes are placed here
+Route::middleware(['auth','authadmin'])->group(function () {
+    Route::get('/admin/dashboard',AdminDashBoardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/categories',AdminCategoriesComponent::class)->name('admin.categories');
+});
