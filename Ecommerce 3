@@ -85,3 +85,17 @@ Route::middleware(['auth','authadmin'])->group(function () {
     Route::get('/admin/dashboard',AdminDashBoardComponent::class)->name('admin.dashboard');
     Route::get('/admin/categories',AdminCategoriesComponent::class)->name('admin.categories');
 });
+
+
+
+
+
+
+
+*************LIVE WIRE VS CONTROLLERS***********
+If you need to make a request to the server, use Livewire.
+
+If not, don't.
+
+Livewire is a replacement for traditional AJAX requests. If your Livewire component doesn't need to get data from the server, it shouldn't be a Livewire component.
+It’s components. You don’t make full pages in liverwire but dynamic components. Forms, search, tables, … stuff that can be changed. Everything else: Controller
