@@ -21,6 +21,10 @@ working with success messages
 working with sessions
 
 injecting scripts into components with @push
+Sending variables to the views in the livewire component classes
+using pagination to limit the number of products displayed
+
+fetching data from relationships , belongs to
 
 
 _______ADMIN AND USER AUTHENTICATION________

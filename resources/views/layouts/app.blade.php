@@ -39,11 +39,11 @@
                     <div class="col-xl-6 col-lg-4">
                         <div class="text-center">
                             <div id="news-flash" class="d-inline-block">
-                                <ul>
+                                {{-- <ul>
                                     <li>Get great devices up to 50% off <a href="shop.html">View details</a></li>
                                     <li>Supper Value Deals - Save more with coupons</li>
                                     <li>Trendy 25silver jewelry, save up 35% off today <a href="shop.html">Shop now</a></li>
-                                </ul>
+                                </ul> --}}
                             </div>
                         </div>
                     </div>
@@ -69,8 +69,9 @@
         <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
             <div class="container">
                 <div class="header-wrap">
-                    <div class="logo logo-width-1">
-                        <a href="index.html"><img src="assets/imgs/logo/logo.png" alt="logo"></a>
+                    <div class="logo logo-width-0">
+                        <p style="font-size: 1cm; margin-right:2cm">Ecommerce</p>
+                        {{-- <a href="index.html"><img style="width:1cm;" src="https://itstrevor.vercel.app/img/Logo1.png" alt="logo"></a> --}}
                     </div>
                     <div class="header-right">
                        @livewire('header-search-component');
@@ -139,9 +140,9 @@
                     </div>
                     <div class="header-nav d-none d-lg-flex">
                         <div class="main-categori-wrap d-none d-lg-block">
-                            <a class="categori-button-active" href="#">
+                            {{-- <a class="categori-button-active" href="#">
                                 <span class="fi-rs-apps"></span> Browse Categories
-                            </a>
+                            </a> --}}
                             <div class="categori-dropdown-wrap categori-dropdown-active-large">
                                 <ul>
                                     <li class="has-children">
@@ -390,7 +391,7 @@
                                             @if(Auth::user()->utype == 'ADM')
                                                 <ul class="sub-menu">
                                                     <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-                                                    <li><a href="#">Products</a></li>
+                                                    <li><a href="{{route('admin.products')}}">Products</a></li>
                                                     <li><a href="{{route('admin.categories')}}">Categories</a></li>
                                                     <li><a href="#">Coupons</a></li>
                                                     <li><a href="#">Orders</a></li>
@@ -409,7 +410,7 @@
                         </div>
                     </div>
                     <div class="hotline d-none d-lg-block">
-                        <p><i class="fi-rs-smartphone"></i><span>Toll Free</span> (+1) 0000-000-000 </p>
+                        <p><i class="fi-rs-smartphone"></i><span>Toll Free</span> (+254) 795-781-794 </p>
                     </div>
                     <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%</p>
                     <div class="header-action-right d-block d-lg-none">
@@ -545,7 +546,7 @@
     {{$slot}}
 
     <footer class="main">
-        <section class="newsletter p-30 text-white wow fadeIn animated">
+        {{-- <section class="newsletter p-30 text-white wow fadeIn animated">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 mb-md-3 mb-lg-0">
@@ -569,24 +570,24 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <section class="section-padding footer-mid">
             <div class="container pt-15 pb-20">
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="widget-about font-md mb-md-5 mb-lg-0">
-                            <div class="logo logo-width-1 wow fadeIn animated">
+                            {{-- <div class="logo logo-width-1 wow fadeIn animated">
                                 <a href="index.html"><img src="assets/imgs/logo/logo.png" alt="logo"></a>
-                            </div>
+                            </div> --}}
                             <h5 class="mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated">Contact</h5>
                             <p class="wow fadeIn animated">
-                                <strong>Address: </strong>562 Wellington Road
+                                <strong>Address: </strong>Anniversary towers, Nairobi
                             </p>
                             <p class="wow fadeIn animated">
-                                <strong>Phone: </strong>+1 0000-000-000
+                                <strong>Phone: </strong>+254 795-781-794
                             </p>
                             <p class="wow fadeIn animated">
-                                <strong>Email: </strong>contact@surfsidemedia.in
+                                <strong>Email: </strong>otitrevor450@gmail.com
                             </p>
                             <h5 class="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Follow Us</h5>
                             <div class="mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0">
@@ -649,7 +650,7 @@
                 </div>
                 <div class="col-lg-6">
                     <p class="text-lg-end text-start font-sm text-muted mb-0">
-                        &copy; <strong class="text-brand">SurfsideMedia</strong> All rights reserved
+                        &copy; <strong class="text-brand">@ R3mot3ch 2023</strong> All rights reserved
                     </p>
                 </div>
             </div>

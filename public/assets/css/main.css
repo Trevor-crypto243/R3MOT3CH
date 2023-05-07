@@ -93,7 +93,7 @@ input:focus::-moz-placeholder {
 }
 
 a {
-  color: #F15412;
+  color: #000000;
 }
 
 a:hover {
@@ -244,7 +244,7 @@ input[type=number]:focus,
 }
 
 .text-brand {
-  color: #F15412 !important;
+  color: #000000 !important;
 }
 
 .text-primary {
@@ -3611,7 +3611,7 @@ table .product-thumbnail img {
 .product-cart-wrap .product-content-wrap .product-price span {
   font-size: 18px;
   font-weight: bold;
-  color: #F15412;
+  color: #575454;
 }
 
 .product-cart-wrap .product-content-wrap .product-price span.new-price {
@@ -6377,7 +6377,7 @@ h6.post-title {
 }
 
 .hotline p {
-  color: #F15412;
+  color: black;
   font-size: 18px;
   font-weight: 700;
   display: -webkit-box;
