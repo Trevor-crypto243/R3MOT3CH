@@ -20,6 +20,8 @@ displaying error messges with @erro @enderror
 working with success messages
 working with sessions
 
+injecting scripts into components with @push
+
 
 _______ADMIN AND USER AUTHENTICATION________
 composer require laravel/breeze --dev
