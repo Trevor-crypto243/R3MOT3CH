@@ -9,6 +9,7 @@ use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\Usr\UserDashBoardComponent;
+use App\Http\Livewire\WishListIconComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\AdminDashBoardComponent;
 
@@ -30,6 +31,7 @@ use App\Http\Livewire\Admin\AdminDashBoardComponent;
 Route::get('/',HomeComponent::class)->name('home.index');
 Route::get('/shop',ShopComponent::class)->name('shop.index');
 Route::get('/cart',CartComponent::class)->name('shop.cart');
+Route::get('/wishlist',WishListIconComponent::class)->name('shop.wishlist');
 Route::get('/checkout',CheckoutComponent::class)->name('home.index');
 Route::get('/product/{slug}',DetailsComponent::class)->name("product.details");
 Route::get('/product-category/{slug}',CategoryComponent::class)->name("product.category");
