@@ -413,7 +413,7 @@
                     <div class="header-action-right d-block d-lg-none">
                         <div class="header-action-2">
                            
-                            @livewire('wishlist-icon-component')
+                            @livewire('wish-list-icon-component')
 
                             @livewire('cart-icon-component')
                            
